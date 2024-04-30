@@ -22,6 +22,8 @@ struct ContentView: View {
 }
 
 struct DayForecast: View {
+    let day: String
+    
     var body: some View {
         VStack {
             Text("Mon")
