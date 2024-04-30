@@ -12,7 +12,7 @@ struct ContentView: View {
         HStack {
             DayForecast(day: "Mon")
             
-            DayForecast()
+            DayForecast(day: "Tue")
         }
     }
 }
