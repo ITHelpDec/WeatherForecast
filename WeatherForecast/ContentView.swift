@@ -31,8 +31,8 @@ struct DayForecast: View {
             Text(day)
             Image(systemName: "sun.max.fill")
                 .foregroundStyle(Color.yellow)
-            Text(high)
-            Text(low)
+            Text("High: \(high)ºF")
+            Text("Low: \(low)ºF")
         }
         .padding()
     }
