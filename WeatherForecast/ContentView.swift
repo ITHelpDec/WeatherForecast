@@ -23,6 +23,8 @@ struct ContentView: View {
 
 struct DayForecast: View {
     let day: String
+    let high: Int
+    let low: Int
     
     var body: some View {
         VStack {
