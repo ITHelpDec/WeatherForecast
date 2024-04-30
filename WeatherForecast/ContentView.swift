@@ -26,7 +26,7 @@ struct DayForecast: View {
     
     var body: some View {
         VStack {
-            Text("Mon")
+            Text(day)
             Image(systemName: "sun.max.fill")
                 .foregroundStyle(Color.yellow)
             Text("High: 70")
