@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         HStack {
-            ExtractedView()
+            DayForecast()
             
             VStack {
                 Text("Tue")
@@ -28,7 +28,7 @@ struct ContentView: View {
     ContentView()
 }
 
-struct ExtractedView: View {
+struct DayForecast: View {
     var body: some View {
         VStack {
             Text("Mon")
