@@ -12,14 +12,7 @@ struct ContentView: View {
         HStack {
             DayForecast()
             
-            VStack {
-                Text("Tue")
-                Image(systemName: "cloud.rain.fill")
-                    .foregroundStyle(Color.blue)
-                Text("High: 60")
-                Text("Low: 40")
-            }
-            .padding()
+            DayForecast()
         }
     }
 }
