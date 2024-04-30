@@ -10,14 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         HStack {
-            VStack {
-                Text("Mon")
-                Image(systemName: "sun.max.fill")
-                    .foregroundStyle(Color.yellow)
-                Text("High: 70")
-                Text("Low: 50")
-            }
-            .padding()
+            ExtractedView()
             
             VStack {
                 Text("Tue")
@@ -33,4 +26,17 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+}
+
+struct ExtractedView: View {
+    var body: some View {
+        VStack {
+            Text("Mon")
+            Image(systemName: "sun.max.fill")
+                .foregroundStyle(Color.yellow)
+            Text("High: 70")
+            Text("Low: 50")
+        }
+        .padding()
+    }
 }
