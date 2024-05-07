@@ -23,6 +23,7 @@ struct ContentView: View {
 
 struct DayForecast: View {
     let day: String
+    let isRainy: Bool
     let high: Int
     let low: Int
     
