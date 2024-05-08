@@ -34,7 +34,7 @@ struct DayForecast: View {
     var body: some View {
         VStack {
             Text(day)
-            Image(systemName: "sun.max.fill")
+            Image(systemName: iconName)
                 .foregroundStyle(Color.yellow)
             Text("High: \(high)ºF")
             Text("Low: \(low)ºF")
