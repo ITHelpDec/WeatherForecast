@@ -27,6 +27,10 @@ struct DayForecast: View {
     let high: Int
     let low: Int
     
+    var iconName: String {
+        
+    }
+    
     var body: some View {
         VStack {
             Text(day)
