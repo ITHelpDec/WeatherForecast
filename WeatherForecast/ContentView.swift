@@ -31,11 +31,15 @@ struct DayForecast: View {
         return isRainy ? "cloud.rain.fill" : "sun.max.fill"
     }
     
+    var iconColour: Color {
+        return isRainy ? Color.blue : Color.yellow
+    }
+    
     var body: some View {
         VStack {
             Text(day)
             Image(systemName: iconName)
-                .foregroundStyle(Color.yellow)
+                .foregroundStyle(iconColour)
             Text("High: \(high)ºF")
             Text("Low: \(low)ºF")
         }
