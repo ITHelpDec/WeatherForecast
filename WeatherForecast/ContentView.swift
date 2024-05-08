@@ -28,7 +28,7 @@ struct DayForecast: View {
     let low: Int
     
     var iconName: String {
-        
+        return "cloud.rain.fill"
     }
     
     var body: some View {
