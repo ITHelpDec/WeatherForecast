@@ -28,11 +28,7 @@ struct DayForecast: View {
     let low: Int
     
     var iconName: String {
-        if (isRainy) {
-            return "cloud.rain.fill"
-        } else {
-            return "sun.max.fill"
-        }
+        return isRainy ? "cloud.rain.fill" : "sun.max.fill"
     }
     
     var body: some View {
