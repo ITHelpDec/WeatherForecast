@@ -42,6 +42,7 @@ struct DayForecast: View {
             Image(systemName: iconName)
                 .foregroundStyle(iconColour)
                 .font(.largeTitle)
+                .padding(5)
             Text("High: \(high)ºF")
                 .fontWeight(.semibold)
             Text("Low: \(low)ºF")
