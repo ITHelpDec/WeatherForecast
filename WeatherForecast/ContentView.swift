@@ -46,6 +46,7 @@ struct DayForecast: View {
                 .fontWeight(.semibold)
             Text("Low: \(low)ºF")
                 .fontWeight(.medium)
+                .foregroundStyle(.secondary)
         }
         .padding()
     }
