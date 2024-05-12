@@ -10,16 +10,15 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            DayForecast(day: "Mon", isRainy: false, high: 70, low: 50)
-            
-            DayForecast(day: "Tue", isRainy: true, high: 60, low: 40)
-            DayForecast(day: "Wed", isRainy: false, high: 70, low: 50)
-            
-            DayForecast(day: "Thu", isRainy: true, high: 60, low: 40)
-            DayForecast(day: "Fri", isRainy: false, high: 70, low: 50)
-            
-            DayForecast(day: "Sat", isRainy: true, high: 60, low: 40)
-            DayForecast(day: "Sun", isRainy: true, high: 60, low: 40)
+            ForEach((0...6), id: \.self) {
+                let day = Calendar.current.date(byAdding: .day, value: $0, to: Date.now) ?? Date.now
+                
+                DayForecast(
+                    day: day,
+                    isRainy: .random(),
+                    high: .random(in: 70...80),
+                    low: .random(in: 50...70))
+            }
         }
     }
 }
@@ -29,7 +28,7 @@ struct ContentView: View {
 }
 
 struct DayForecast: View {
-    let day: String
+    let day: Date
     let isRainy: Bool
     let high: Int
     let low: Int
@@ -44,7 +43,7 @@ struct DayForecast: View {
     
     var body: some View {
         HStack {
-            Text(day)
+            Text(day.formatted(.dateTime.weekday(.abbreviated)))
                 .font(.headline)
             Image(systemName: iconName)
                 .foregroundStyle(iconColour)
