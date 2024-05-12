@@ -9,10 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HStack {
+        VStack {
             DayForecast(day: "Mon", isRainy: false, high: 70, low: 50)
             
             DayForecast(day: "Tue", isRainy: true, high: 60, low: 40)
+            DayForecast(day: "Wed", isRainy: false, high: 70, low: 50)
+            
+            DayForecast(day: "Thu", isRainy: true, high: 60, low: 40)
+            DayForecast(day: "Fri", isRainy: false, high: 70, low: 50)
+            
+            DayForecast(day: "Sat", isRainy: true, high: 60, low: 40)
+            DayForecast(day: "Sun", isRainy: true, high: 60, low: 40)
         }
     }
 }
@@ -36,7 +43,7 @@ struct DayForecast: View {
     }
     
     var body: some View {
-        VStack {
+        HStack {
             Text(day)
                 .font(.headline)
             Image(systemName: iconName)
